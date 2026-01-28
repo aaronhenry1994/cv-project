@@ -6,6 +6,6 @@ import Name from './components/Name.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Name />
+    <App />
   </StrictMode>,
 )
