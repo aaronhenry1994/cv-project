@@ -33,6 +33,55 @@
   }
 }
 
+.personal {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  height: 450px;
+  gap: 8px
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  width: 500px;
+}
+
+.nameField {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.phoneField {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.emailField {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.output-text {
+  color: black;
+}
+
+.schoolInfo {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  height: 450px;
+  gap: 8px
+}
+
 .card {
   padding: 2em;
 }

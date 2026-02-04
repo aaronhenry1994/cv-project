@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Name from './components/Name'
+import School from './components/School'
 import './App.css'
 
 function App() {
@@ -8,8 +9,8 @@ function App() {
   return (
     <>
       <div>
-        <h2>Personal Information</h2>
           <Name />
+          <School />
       </div>
     </>
   )

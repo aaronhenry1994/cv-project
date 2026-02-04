@@ -74,29 +74,39 @@ export default function Name() {
     }
 
     return (
-        <div id='bigParent'>
-        <div className="Personal" id='parent'>
-            <div className="name" id='nameParent'>
+        <div class='personal'>
+            <div class='input'>
+                 <h2>Personal Information:</h2>
+            <div class="name" id='nameParent'>
                 <h2>Name:</h2>
                 <input type="text" id='nameBox' value={name} onChange={handleName}/>
             </div>
-            <div className="phone" id='phoneParent'>
+            <div class="phone" id='phoneParent'>
                 <h2>Phone Number:</h2>
                 <input type="text" id='phoneBox' value={phone} onChange={handlePhone}/>
             </div>
-            <div className="email" id='emailParent'>
+            <div class="email" id='emailParent'>
                 <h2>Email</h2>
                 <input type="text" id='emailBox' value={email}  onChange={handleEmail}/>
             </div>
             <button id='submitBtn' onClick={handleSubmit}>Submit</button>
             <button onClick={handleReset}>Reset</button>
-            <div id='resume'>
-                <h2>Personal Information:</h2>
-                <div id='nameP'></div>
-                <div id='phoneP'></div>
-                <div id='emailP'></div>
             </div>
-        </div>
+            <div class='output'>
+                <h2 class='output-text'>Personal Information:</h2>
+                <div class='nameField'>
+                    <div class='output-text'>Name:</div>
+                    <div class='output-text' id='nameP'></div>
+                </div>
+                <div class='phoneField'>
+                    <div class='output-text'>Phone:</div>
+                    <div class='output-text' id='phoneP'></div>
+                </div>
+                <div class='emailField'>
+                    <div class='output-text'>Email:</div>
+                    <div class='output-text' id='emailP'></div>
+                </div>
+            </div>
         </div>
     )
 }
