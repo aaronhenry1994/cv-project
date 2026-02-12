@@ -4,15 +4,14 @@ export default function Name() {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
-    const [submitted, setIsSubmitted] = useState(false);
 
     let nameBox = document.getElementById('nameBox')
     let phoneBox = document.getElementById('phoneBox')
     let emailBox = document.getElementById('emailBox')
 
-    let nameNode = document.getElementById('nameParent')
-    let phoneNode = document.getElementById('phoneParent')
-    let emailNode = document.getElementById('emailParent')
+    let nameTarget = document.getElementById('nameOut')
+    let phoneTarget = document.getElementById('phoneOut')
+    let emailTarget = document.getElementById('emailOut')
 
 
     function handleName(e) {
@@ -31,27 +30,9 @@ export default function Name() {
         let submitBtn = document.getElementById('submitBtn')
         submitBtn.innerText = 'Edit'
 
-        let resumeH = document.createElement('h2')
-        resumeH.textContent = "Resume"
-        resumeH.id = 'resumeH'
-
-        let personal = document.createElement('h3')
-        personal.textContent = 'Personal Information'
-        personal.id = 'personal'
-
-        let nameP = document.getElementById('nameP')
-        nameP.textContent = nameBox.value
-
-        let phoneP = document.getElementById('phoneP')
-        phoneP.textContent = phoneBox.value
-
-        let emailP = document.getElementById('emailP')
-        emailP.textContent = emailBox.value
-
-
-        nameP.textContent = nameBox.value
-        phoneP.textContent = phoneBox.value
-        emailP.textContent = emailBox.value
+        nameTarget.textContent = 'Name:' + ' ' + nameBox.value
+        phoneTarget.textContent = 'Phone Number: ' +  phoneBox.value
+        emailTarget.textContent = 'Email Address: ' + emailBox.value
         
 
     }
@@ -91,21 +72,6 @@ export default function Name() {
             </div>
             <button id='submitBtn' onClick={handleSubmit}>Submit</button>
             <button onClick={handleReset}>Reset</button>
-            </div>
-            <div class='output'>
-                <h2 class='output-text'>Personal Information:</h2>
-                <div class='nameField'>
-                    <div class='output-text'>Name:</div>
-                    <div class='output-text' id='nameP'></div>
-                </div>
-                <div class='phoneField'>
-                    <div class='output-text'>Phone:</div>
-                    <div class='output-text' id='phoneP'></div>
-                </div>
-                <div class='emailField'>
-                    <div class='output-text'>Email:</div>
-                    <div class='output-text' id='emailP'></div>
-                </div>
             </div>
         </div>
     )

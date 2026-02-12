@@ -78,8 +78,194 @@
   display: flex;
   flex-direction: column;
   flex-flow: column wrap;
-  height: 450px;
+  height: 150px;
   gap: 8px
+}
+
+.schoolOutput {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  width: 500px;
+};
+
+.highschoolOut {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.outputText {
+  color: black;
+}
+
+.outputTest {
+  background-color: white;
+  height: 200px;
+  width: 200px;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.details {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.generators {
+  overflow: scroll;
+  max-height: 800px;
+  overflow-x: hidden;
+}
+
+.allOutput {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 500px;
+  margin-top: 100px;
+}
+
+#resumeHeader {
+  color: black;
+}
+
+#personalHeader {
+  color: black;
+}
+
+#nameOut {
+  margin-top: 20px;
+  color: black;
+}
+
+#phoneOut {
+  color: black;
+}
+
+#emailOut {
+  color: black;
+}
+
+#schoolHeader {
+  color: black;
+}
+
+#highSchoolOut {
+  color: black;
+}
+
+#collegeOut {
+  color: black;
+}
+
+.workExp {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.workInput {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+#employer1Out {
+  color: black;
+}
+
+#employer2Out {
+  color: black;
+}
+
+#employer3Out {
+  color: black;
+}
+
+#job1 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#job2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#job3 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#job1Input {
+  width: fit-content;
+}
+
+#job1Para {
+  width: fit-content;
+  height: 100px;
+}
+
+#job2Input {
+  width: fit-content;
+}
+
+#job2Para {
+  width: fit-content;
+  height: 100px;
+}
+
+#job3Input {
+  width: fit-content;
+}
+
+#job3Para {
+  width: fit-content;
+  height: 100px;
+}
+
+#job1Title {
+  color: black;
+}
+
+#job1Desc {
+  color: black;
+}
+
+#job2Title {
+  color: black;
+}
+
+#job2Desc {
+  color: black
+}
+
+#job3Title {
+  color: black;
+}
+
+#job3Desc {
+  color: black
+}
+
+h3 {
+  color: black;
 }
 
 .card {

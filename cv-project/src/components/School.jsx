@@ -1,8 +1,15 @@
 import React, {useState} from 'react';
 
+
 export default function School() {
-    const [highSchool, setHighSchool] = useState('')
-    const {college, setCollege} = useState('')
+    const [highSchool, setHighSchool] = useState("")
+    const {college, setCollege} = useState("")
+
+    let highSchoolInput = document.getElementById('highSchoolBox')
+    let collegeInput = document.getElementById('collegeBox')
+
+    let highSchoolOut = document.getElementById('highSchoolOut')
+    let collegeOut = document.getElementById('collegeOut')
 
     function handleHighSchool(e) {
         setHighSchool(e.target.value)
@@ -12,23 +19,26 @@ export default function School() {
         setCollege(e.target.value)
     }
 
-
-
     function handleSchoolSubmit() {
-        let highSchoolInput = document.getElementById('highSchoolBox');
-        let highSchoolOutput = document.getElementById('highSchoolOutputText');
+        let schoolSubmit = document.getElementById('schoolSubmit');
+        
+        schoolSubmit.textContent = 'Edit';
 
-        let collegeInput = document.getElementById('collegeBox')
-        let collegeOutput = document.getElementById('collegeOutputText');
+        highSchoolOut.textContent = 'High School Name: ' +  highSchoolInput.value;
+        collegeOut.textContent = 'College Name: ' + collegeInput.value;
+    }
 
-        highSchoolOutput.textContent = highSchoolInput.value;
-        collegeOutput.textContent = collegeInput.value;
+    function handleSchoolReset() {
+        schoolSubmit.textContent = 'Submit'
+        setHighSchool('')
+        setCollege('')
+
     }
 
     return (
         <div class='schoolInfo'>
-            <h2>School Information:</h2>
             <div class='schoolInput'>
+                <h2>School Information:</h2>
                 <div class='highSchool'>
                     <div>High School:</div>
                     <input id='highSchoolBox' onChange={handleHighSchool} value={highSchool} type="text" />
@@ -37,19 +47,8 @@ export default function School() {
                     <div>College:</div>
                     <input id='collegeBox' onChange={handleCollege} value={college} type="text" />
                 </div>
-                <button id='schoolSubmit' onClick={handleSchoolSubmit}>Submit</button>
-                <button id='schoolReset'>Reset</button>
-            </div>
-            <div class='schoolOutput'>
-                <h2 class='outputText'>School Information:</h2>
-                <div class='highSchoolOut'>
-                    <div class='outputText'>High School:</div>
-                    <div id='highSchoolOutputText'></div>
-                </div>
-                <div class='collegeOut'>
-                    <div class='outputText'>College:</div>
-                    <div id='collegeOutputText'></div>
-                </div>
+                <button onClick={handleSchoolSubmit} id='schoolSubmit'>Submit</button>
+                <button onClick={handleSchoolReset} id='schoolReset'>Reset</button>
             </div>
         </div>
     )
